@@ -8,7 +8,7 @@ import {useEffect, useState} from "react";
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "Resumind" },
-    { name: "description", content: "Smart feedback for your dream job!" },
+    { name: "description", content: "Land your dream job with AI-powered resume insights" },
   ];
 }
 
@@ -39,7 +39,7 @@ export default function Home() {
     loadResumes()
   }, []);
 
-  return <main className="bg-[url('/images/bg-main.svg')] bg-cover">
+  return <main className="bg-[url('/images/subtle-prism.svg')] bg-cover">
     <Navbar />
 
     <section className="main-section">
@@ -48,7 +48,7 @@ export default function Home() {
         {!loadingResumes && resumes?.length === 0 ? (
             <h2>No resumes found. Upload your first resume to get feedback.</h2>
         ): (
-          <h2>Review your submissions and check AI-powered feedback.</h2>
+          <h2>Get instant, AI-powered insights to help your resume stand out.</h2>
         )}
       </div>
       {loadingResumes && (
